@@ -11,5 +11,5 @@ export default function Footer() {
             </div>
             <p>Footerコンポーネント</p>
         </div>
-    );
+    )
 }
