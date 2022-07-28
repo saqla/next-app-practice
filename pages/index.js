@@ -1,11 +1,9 @@
-import Link from "next/link";
-
-const products = [{ name: "bag"}, { name: "shoes"}, { name: "socks"} ];
+import Layout from "../components/Layout";
 
 export default function Home() {
   return (
-    <div>
+    <Layout>
       <h1>Hello Next.js</h1>
-    </div>
+    </Layout>
   );
 }
