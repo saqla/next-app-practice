@@ -1,9 +1,17 @@
-import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
+
+const products = [{ name: 'bag' }, { name: 'shoes'}, { name: 'socks'}];
 
 export default function Home() {
   return (
     <div>
+      <Head>
+        <title>{products[0].name}</title>
+        <meta name="description" content={`${products[0].name}のページ`} />
+        <meta property="og:title" content={products[0].name} />
+        <meta property="og:description" content={`${products[0].name}のページ`} />
+      </Head>
       <ul>
         <li>
           <Link href="/about">
@@ -12,12 +20,6 @@ export default function Home() {
         </li>
       </ul>
       <h1>Hello Next.js</h1>
-      <Image
-        src="https://images.unsplash.com/photo-1659010523604-e8ee8fc39adf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-        width={500}
-        height={300}
-        alt="Image Link Test"
-      />
     </div>
   );
 }
