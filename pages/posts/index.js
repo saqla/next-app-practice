@@ -19,18 +19,18 @@ export default function index({ posts }) {
     );
 }
 
-export async function getServerSideProps() {
-    const api_key = process.env.API_KEY;
-    const result = await fetch(
-        `https://end_point_url/?api_key=${api_key}`
-    )
-}
-
-// export async function getStaticProps() {
-//     const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
-//     const posts = await res.json();
-//     return { props: { posts } } 
+// export async function getServerSideProps() {
+//     const api_key = process.env.API_KEY;
+//     const result = await fetch(
+//         `https://end_point_url/?api_key=${api_key}`
+//     )
 // }
+
+export async function getStaticProps() {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+    const posts = await res.json();
+    return { props: { posts } } 
+}
 
 
 
