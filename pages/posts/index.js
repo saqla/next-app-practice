@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function index({ posts }) {
     return (
         <div>
-            <h1>POST一覧</h1>
+            <h1 className="text-3xl underline text-red-400">POST一覧</h1>
             <ul>
                 {posts.map((post) => {
                     return (
