@@ -5,29 +5,27 @@ import {
     Tab,
     TabPanel,
 } from "@material-tailwind/react";
+import Light from "./light";
+import Full from "./full";
+import Aliance from "./aliance";
 
 export default function Example() {
     const data = [
         {
             label: "ライトパーティ",
             value: "lpt",
-            desc: `It really matters and then like it really doesn't matter.
-            What matters is the people who are sparked by it. And the people 
-            who are like offended by it, it doesn't matter.`,
+            desc: < Light />,
         },
         {
             label: "フルパーティ",
             value: "fpt",
-            desc: `Because it's about motivating the doers. Because I'm here
-            to follow my dreams and inspire other people to follow their dreams, too.`,
+            desc: < Full />,
         },
 
         {
             label: "アライアンス",
             value: "ali",
-            desc: `We're not always in the position that we want to be at.
-            We're constantly growing. We're constantly making mistakes. We're 
-            constantly trying to express ourselves and actualize our dreams.`,
+            desc: < Aliance />,
         },
     ];
 
